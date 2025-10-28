@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { UiButton } from 'storybook-and-npm-testing'
+import { ref, useId } from 'vue'
+
 const output = ref<string>("0")
 const firstNum = ref<number | null>(null)
 const operation = ref<string | null>(null)
@@ -76,6 +78,7 @@ function calculate() {
 </script>
 
 <template>
+
 <div class="calc-background">
 <span class="brand"> СУПЕР КАЛЬКУЛЯТОР 3 ТЫСЯЧИ</span>
 <input class="result-board" v-model="output"/>  
@@ -105,6 +108,8 @@ function calculate() {
     <button @click="calculate">=</button>
 
     <button @click="setOperation('/')" class="operation">/</button>
+    
+    
 
   </div>
 </div>
@@ -122,7 +127,7 @@ function calculate() {
   }
   .calc-background{
     
-    border: 6px solid rgb(0, 0, 0);
+    border: 6px solid rgb(0, 0, 0); 
     background-color: rgb(85, 78, 78);
     border-radius: 20px;
     width: 500px;
